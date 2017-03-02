@@ -1,0 +1,30 @@
+C:\Users\gchen2\Downloads\axis2-1.6.2-bin\bin>WSDL2Java -uri http://www.webservicex.net/BibleWebservice.asmx?WSDL -p wsstub.ca -d adb -s
+
+https://172.20.64.239:9443/TRSMobileApp/services/MobileJobService?wsdl
+
+C:\Users\gchen2\Downloads\axis2-1.6.2-bin\bin>WSDL2Java -uri http://172.20.64.242:9081/TRSMobileApp/services/MobileJobService?wsdl -p wsstub.ca -d adb -s
+
+https://172.20.64.239:9443/TRSMobileApp/services/MobileJobService?wsdl 
+
+C:\dev\Java\jdk1.8.0_121\jre\bin\keytool  -list -keystore  cacerts
+
+import certificate
+keytool -import -alias myprivateroot -keystore ..\lib\security\cacerts -file c:\root.cer
+
+C:\dev\Java\jdk1.8.0_121\jre\bin\keytool  -delete -keystore cacerts -storepass changeit -alias "localhost"
+
+C:\dev\Java\jdk1.8.0_121\jre\bin\keytool -import -alias 172.20.64.239 -keystore cacerts -file localhost.crt
+
+WSDL2Java -uri https://172.20.64.239:9443/TRSMobileApp/services/MobileJobService?wsdl -p https.trsmobile.cot.ca -d adb -s
+
+list certificate
+C:\dev\Java\jdk1.8.0_121\jre\bin\keytool -list -v -keystore -list -v -keystore cacerts
+
+C:\dev\Java\jdk1.8.0_121\jre\bin\keytool -import -alias was8-intra-dev.toronto.ca -keystore cacerts -file  was8-intra-dev.toronto.ca
+
+WSDL2Java -uri https://was8-intra-dev.toronto.ca/TRSMobileApp/services/CostSheetService?wsdl  -p https.trsmobile.cot.ca -d adb -s
+
+delete certificate
+
+C:\dev\Java\jdk1.8.0_121\jre\lib\security>C:\dev\Java\jdk1.8.0_121\jre\bin\keytool  -delete -keystore cacerts -storepass changeit -alias "localhost"
+
